@@ -4,9 +4,9 @@ import React from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-blue-950">
+    <div className="bg-white">
       <Navbar />
-      <div className="max-w-5xl mx-auto py-6">
+      <div className="bg-white mx-auto py-4 fixed top-[72.5px] w-full pl-10 z-50 max-sm:hidden">
         <MegaMenu />
       </div>
       {children}

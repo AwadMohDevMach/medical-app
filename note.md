@@ -3,7 +3,8 @@
     - one for back pages or dashboard
     - one layout for both or general layout
 ---------
-Top booked=>
+
+1=>
 Telehealth
 Weight loss
 Video prescription refill
@@ -11,9 +12,15 @@ UTI consult
 ED consult
 Mental health consult
 
+2=>
+Primary care
+Dermatology
+Pediatrics
+Men’s health
+Women’s health
+Dental
 
-
-Specialties =>
+3=>
 Primary care
 OB/GYN
 Dermatology
@@ -24,9 +31,7 @@ Urology
 Radiology
 Cardiology
 
-
-
-Symptoms=>
+4=>
 Anxiety
 Depression
 Asthma
