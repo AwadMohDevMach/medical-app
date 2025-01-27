@@ -2,11 +2,11 @@ import React from "react";
 import HeadenButton from "./HeadenButton";
 
 export type brandBrands = {
-    imageSrc : string,
-    lightImageSrc : string,
-    altText : string,
-    link : string,
-}
+  imageSrc: string;
+  lightImageSrc: string;
+  altText: string;
+  link: string;
+};
 const brandsData = [
   {
     imageSrc:
@@ -43,7 +43,7 @@ const brandsData = [
 export default function Brands() {
   return (
     <section className="bg-slate-100 py-10 dark:bg-dark max-w-[1240px]">
-        <HeadenButton text="Trusted By"/>
+      <HeadenButton text="Trusted By" />
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
@@ -59,7 +59,7 @@ export default function Brands() {
   );
 }
 
-const SingleImage = ({ brand } : {brand : brandBrands}) => {
+const SingleImage = ({ brand }: { brand: brandBrands }) => {
   const { link, imageSrc, lightImageSrc, altText } = brand;
   return (
     <>
@@ -69,7 +69,7 @@ const SingleImage = ({ brand } : {brand : brandBrands}) => {
       >
         <img src={imageSrc} alt={altText} className="h-10 w-full dark:hidden" />
         <img
-          src={ lightImageSrc}
+          src={lightImageSrc}
           alt={altText}
           className="hidden h-10 w-full dark:block"
         />

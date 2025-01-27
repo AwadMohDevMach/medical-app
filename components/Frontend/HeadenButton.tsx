@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function HeadenButton({ text = "Headen" }: { text?: string }) {
+export default function HeadenButton({ text }: { text: string }) {
   return (
     <h1
       className="relative border border-blue-600 

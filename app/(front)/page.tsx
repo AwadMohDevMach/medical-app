@@ -1,19 +1,22 @@
 import Brands from "@/components/Frontend/Brands";
 import Hero from "@/components/Frontend/Hero";
 import TabbedSection from "@/components/Frontend/TabbedSection";
+import DoctorsList from "@/components/DoctorsList";
 
 export default function Home() {
   return (
-    <section >
+    <section>
       <div className="bg-blue-950">
-      <Hero />
+        <Hero />
       </div>
 
       <div className="bg-slate-100">
-      <Brands/>
+        <Brands />
       </div>
 
-      <TabbedSection/>
+      <TabbedSection />
+      <DoctorsList />
+      <DoctorsList title="In-person doctor visit" isInPerson={true} className="bg-white py-10 lg:py-28"/>
     </section>
   );
 }

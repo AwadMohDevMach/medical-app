@@ -13,7 +13,7 @@ const TabbedSection = () => {
                 <HeadenButton text="Our Services" />
               </span>
               <h2 className="mb-3 text-2xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
-                TBrowse your doctors By.
+                Browse your doctors By.
               </h2>
               <p className="text-base text-body-color dark:text-dark-6">
                 Choose from thousands of providers at every day affordable
