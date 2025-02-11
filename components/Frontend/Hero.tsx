@@ -21,7 +21,7 @@ const TEXTS = [
 
 const Hero = () => {
   return (
-    <div className="bg-blue-950 mt-[130px] max-sm:ml-[10px] max-sm:mt-[55px] max-sm:max-w-96">
+    <div className="bg-blue-950 max-sm:ml-[10px] max-sm:mt-[55px] max-sm:max-w-96">
       <div className="relative  pb-[110px] pt-[50px] dark:bg-dark lg:pt-[50px] max-w-6xl mx-auto ">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
