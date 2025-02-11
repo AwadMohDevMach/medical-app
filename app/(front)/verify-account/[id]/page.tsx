@@ -3,10 +3,11 @@ import VerifyTokenForm from "@/components/verfifyTokenForm";
 // import VerifyTokenForm from "@/components/VerifyTokenForm";
  
 export default async function VerifyAccount({
-  params : {id},
+  params,
 }: {
-  params: { id: string };
+  params:Promise<{ id: string }>;
 }) {
+  const { id } = await params;
   //Get a User from db
   const user = await getUserById(id);
   const userToken = user?.token;
