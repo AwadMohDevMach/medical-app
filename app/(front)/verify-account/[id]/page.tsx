@@ -3,7 +3,7 @@ import VerifyTokenForm from "@/components/verfifyTokenForm";
 // import VerifyTokenForm from "@/components/VerifyTokenForm";
  
 export default async function VerifyAccount({
-  params: { id },
+  params : {id},
 }: {
   params: { id: string };
 }) {
