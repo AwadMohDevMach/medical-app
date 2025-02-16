@@ -22,7 +22,6 @@ export default function RegisterForm({ role = "USER" }: { role?: UserRole }) {
   } = useForm<TRegisterAndLogInIputsProps>();
 
   async function onSubmit(data: TRegisterAndLogInIputsProps) {
-    // console.log(data)
     setIsLoading(true);
     data.role = role;
     try {
@@ -33,8 +32,8 @@ export default function RegisterForm({ role = "USER" }: { role?: UserRole }) {
         reset();
         setIsLoading(false);
         toast.success("User created successfully");
+        router.push("/login")
         console.log(user.data);
-        router.push("/register/verify-account");
       } else {
         console.log(user.error);
       }

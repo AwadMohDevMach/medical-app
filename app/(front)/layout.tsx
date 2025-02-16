@@ -1,3 +1,4 @@
+import Footer from "@/components/Frontend/Footer";
 import MegaMenu from "@/components/Frontend/MegaMenu";
 import Navbar from "@/components/Frontend/Navbar";
 import React from "react";
@@ -12,6 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="mt-[60px]">
       {children}
       </div>
+      <Footer/>
     </div>
   );
 }

@@ -4,9 +4,8 @@ import { TRegisterAndLogInIputsProps } from "@/types/dataServices";
 import { prismaClient } from "@/lib/db";
 import bcrypt from "bcrypt";
 import { Resend } from "resend";
-
-import appError from "../backend/utils/appError";
 import EmailTemplate from "@/components/Emails/EmailTemplate";
+import { isValid } from "date-fns";
 
 export async function createUser(formData: TRegisterAndLogInIputsProps) {
   const resend = new Resend(process.env.RESEND_API_KEY);
@@ -47,24 +46,25 @@ export async function createUser(formData: TRegisterAndLogInIputsProps) {
         password: hashedPassword,
         role,
         token: userToken,
+        isVerfied : true
       },
     });
     //Send an Email with the Token on the link as a search param
-    const token = newUser.token;
-    const userId = newUser.id;
-    const firstName = newUser.name.split(" ")[0];
-    const linkText = "Verify your Account ";
-    const message =
-      "Thank you for registering with Gecko. To complete your registration and verify your email address, please enter the following 6-digit verification code on our website :";
-    const sendMail = await resend.emails.send({
-      from: "Medical App <info@jazzafricaadventures.com>",
-      to: email,
-      subject: "Verify Your Email Address",
-      react: EmailTemplate({ firstName, token, linkText, message }),
-    });
-    console.log(token);
-    console.log(sendMail);
-    console.log(newUser);
+    // const token = newUser.token;
+    // const userId = newUser.id;
+    // const firstName = newUser.name.split(" ")[0];
+    // const linkText = "Verify your Account ";
+    // const message =
+    //   "Thank you for registering with Gecko. To complete your registration and verify your email address, please enter the following 6-digit verification code on our website :";
+    // const sendMail = await resend.emails.send({
+    //   from: "Medical App <info@jazzafricaadventures.com>",
+    //   to: email,
+    //   subject: "Verify Your Email Address",
+    //   react: EmailTemplate({ firstName, token, linkText, message }),
+    // });
+    // console.log(token);
+    // console.log(sendMail);
+    // console.log(newUser);
     return {
       error: null,
       status: 200,

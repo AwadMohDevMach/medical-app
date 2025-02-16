@@ -1,5 +1,5 @@
 import React from "react";
-import HeadenButton from "./HeadenButton";
+import HeadenButton from "../HeadenButton";
 
 export type brandBrands = {
   imageSrc: string;
