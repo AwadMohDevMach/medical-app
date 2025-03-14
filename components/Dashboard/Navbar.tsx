@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import {
-  CircleUser,
   Home,
   LineChart,
   Menu,
@@ -39,7 +38,7 @@ import { useRouter } from "next/navigation";
 import { Session } from "next-auth";
 import { signOut } from "next-auth/react";
 
-export default function Navbar({ session }: { session: Session }) {
+export default function NavBar({ session }: { session: Session }) {
   const user = session.user;
   const router = useRouter();
   async function handleLogout() {
