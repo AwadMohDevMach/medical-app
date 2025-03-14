@@ -5,12 +5,12 @@ import DoctorsList from "@/components/DoctorsList";
 
 export default function Home() {
   return (
-    <section>
+    <section >
       <div className="bg-blue-950">
         <Hero />
       </div>
 
-      <div className="bg-slate-100">
+      <div className="bg-slate-100 dark:bg-slate-800">
         <Brands />
       </div>
 

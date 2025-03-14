@@ -13,8 +13,35 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import { Microscope } from "lucide-react"
 
 export function MobileNav() {
+  const MobileNavLinks = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "Fine Doctor",
+      path: "/find-doctor",
+    },
+    {
+      name: "Telehealth Vist",
+      path: "/telehealth",
+    },
+    {
+      name: "In-Persone Vist",
+      path: "/inpersone",
+    },
+    {
+      name: "About",
+      path: "/about",
+    },
+    {
+      name: "Be Services Provider",
+      path: "/contact",
+    },
+  ];
   const [open, setOpen] = React.useState(false)
   const { setMetaColor, metaColor } = useMetaColor()
 
@@ -56,6 +83,10 @@ export function MobileNav() {
       <DrawerContent className="max-h-[80svh] p-0">
         <div className="overflow-auto p-6">
           <div className="flex flex-col space-y-3">
+          <h2 className="flex font-semibold">
+          <Microscope className="mr-2 w-4 h-4"/>
+          Online Docs
+          </h2>
             {docsConfig.mainNav?.map(
               (item) =>
                 item.href && (
@@ -70,6 +101,7 @@ export function MobileNav() {
             )}
           </div>
           <div className="flex flex-col space-y-2">
+          
             {docsConfig.sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col gap-4 pt-6">
                 <h4 className="text-xl font-medium">{item.title}</h4>

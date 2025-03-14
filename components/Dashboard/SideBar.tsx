@@ -1,6 +1,7 @@
 "use client";
 import {
   Bell,
+  Globe,
   Home,
   LineChart,
   Package,
@@ -51,9 +52,9 @@ export default function Sidebar() {
       icon: Settings,
     },
     {
-      label: "Analytics",
-      href: "/dashboard/analytics",
-      icon: LineChart,
+      label: "Online",
+      href: "/",
+      icon: Globe,
     },
   ];
   return (

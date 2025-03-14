@@ -17,7 +17,7 @@ const TEXTS = [
 
 const Hero = () => {
   return (
-    <div className="bg-blue-950 max-sm:ml-[10px] max-sm:mt-[55px] max-sm:max-w-96 dark:bg-slate-950">
+    <div className="bg-blue-950 max-sm:ml-[10px] max-sm:mt-[55px] dark:bg-slate-950 px-10">
       <div className="relative  pb-[110px] pt-[50px] dark:bg-dark lg:pt-[50px] max-w-6xl mx-auto ">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -34,7 +34,7 @@ const Hero = () => {
                   bring you simple, affordable, and transparent healethcare
                 </p>
                 {/* <SearchBar /> */}
-                <div className="hidden w-full flex-1 md:flex md:w-auto md:flex-none pb-4">
+                <div className="w-full flex-1 md:flex md:w-auto md:flex-none pb-4">
                   <CommandMenu />
                 </div>
                 <ul className="flex flex-wrap items-center">

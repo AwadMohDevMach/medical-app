@@ -1,9 +1,9 @@
-import { MainNavItem, SidebarNavItem } from "@/types/nav"
+import { MainNavItem, SidebarNavItem } from "@/types/nav";
 
 export interface DocsConfig {
-  mainNav: MainNavItem[]
-  sidebarNav: SidebarNavItem[]
-  chartsNav: SidebarNavItem[]
+  mainNav: MainNavItem[];
+  sidebarNav: SidebarNavItem[];
+  chartsNav: SidebarNavItem[];
 }
 
 export const docsConfig: DocsConfig = {
@@ -13,28 +13,24 @@ export const docsConfig: DocsConfig = {
       href: "/",
     },
     {
-      title: "Documentation",
-      href: "/docs",
+      title: "Fine Doctor",
+      href: "/find-doctor",
     },
     {
-      title: "Components",
-      href: "/docs/components/accordion",
+      title: "Telehealth Vist",
+      href: "/telehealth",
     },
     {
-      title: "Blocks",
-      href: "/blocks",
+      title: "In-Persone Vist",
+      href: "/inpersone",
     },
     {
-      title: "Charts",
-      href: "/charts",
+      title: "About",
+      href: "/about",
     },
     {
-      title: "Themes",
-      href: "/themes",
-    },
-    {
-      title: "Colors",
-      href: "/colors",
+      title: "Be Services Provider",
+      href: "/contact",
     },
   ],
   sidebarNav: [
@@ -525,4 +521,4 @@ export const docsConfig: DocsConfig = {
       ],
     },
   ],
-}
+};
