@@ -1,5 +1,6 @@
+import dynamic from 'next/dynamic';
 
-import NavBar from "@/components/Dashboard/NavBar";
+const NavBar = dynamic(() => import('@/components/Dashboard/NavBar'), { ssr: false });
 import Sidebar from "@/components/Dashboard/SideBar";
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
