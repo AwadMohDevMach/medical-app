@@ -38,11 +38,11 @@ import { useRouter } from "next/navigation";
 import { Session } from "next-auth";
 import { signOut } from "next-auth/react";
 
-export default function NavBar({ session }: { session: Session }) {
+export default function Navbar({ session }: { session: Session }) {
   const user = session.user;
   const router = useRouter();
   async function handleLogout() {
-    await signOut()
+    await signOut();
     router.push("/login");
   }
   return (
@@ -153,13 +153,19 @@ export default function NavBar({ session }: { session: Session }) {
             <span className="sr-only">Toggle user menu</span>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel className="text-center">{user.name}</DropdownMenuLabel>
-            <DropdownMenuLabel className="text-center font-light text-sm text-slate-500">{user.email}</DropdownMenuLabel>
+            <DropdownMenuLabel className="text-center">
+              {user.name}
+            </DropdownMenuLabel>
+            <DropdownMenuLabel className="text-center font-light text-sm text-slate-500">
+              {user.email}
+            </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>Settings</DropdownMenuItem>
             <DropdownMenuItem>Support</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={()=> handleLogout()}>Logout</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleLogout()}>
+              Logout
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </header>
