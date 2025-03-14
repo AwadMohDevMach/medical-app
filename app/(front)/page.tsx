@@ -16,7 +16,7 @@ export default function Home() {
 
       <TabbedSection />
       <DoctorsList />
-      <DoctorsList title="In-person doctor visit" isInPerson={true} className="bg-white py-10 lg:py-28"/>
+      <DoctorsList title="In-person doctor visit" isInPerson={true} className="bg-blue-50 py-10 lg:py-28 dark:bg-slate-800"/>
     </section>
   );
 }

@@ -118,7 +118,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="pt-10 bg-slate-100">
+    <footer className="pt-10 bg-slate-100 dark:bg-slate-950">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="justify-between items-center gap-12 md:flex">
           <div className="flex-1 max-w-lg">
@@ -132,7 +132,7 @@ export default function Footer() {
         <div className="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0">
           {footerNavs.map((item, idx) => (
             <ul className="space-y-4 text-gray-600" key={idx}>
-              <h4 className="text-gray-800 font-semibold sm:pb-2">
+              <h4 className="text-gray-800 dark:text-slate-50 font-semibold sm:pb-2">
                 {item.label}
               </h4>
               {item.items.map((el, idx) => (

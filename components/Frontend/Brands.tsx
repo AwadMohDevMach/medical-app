@@ -42,7 +42,7 @@ const brandsData = [
 
 export default function Brands() {
   return (
-    <section className="bg-slate-100 py-10 dark:bg-dark max-w-[1240px]">
+    <section className="bg-slate-100 dark:bg-slate-800 dark:text-slate-200  py-10 dark:bg-dark max-w-[1240px]">
       <HeadenButton text="Trusted By" />
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">

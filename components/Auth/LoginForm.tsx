@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { type TRegisterAndLogInIputsProps } from "@/types/dataServices";
-import TextInputs from "../FormInputs/TextInputs";
-import { useState } from "react";
-import SubmitButton from "../FormInputs/SubmitButton";
 import toast from "react-hot-toast";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { Alert } from "flowbite-react";
+import TextInputs from "../FormInputs/TextInputs";
+import { useState } from "react";
+import SubmitButton from "../FormInputs/SubmitButton";
 import { HiInformationCircle } from "react-icons/hi";
 
 export default function LoginForm() {
@@ -80,6 +80,7 @@ export default function LoginForm() {
             register={register}
             errors={errors}
             type="email"
+            placeholder=""
           />
           <TextInputs
             label="Password"
@@ -87,6 +88,7 @@ export default function LoginForm() {
             register={register}
             errors={errors}
             type="password"
+             placeholder=""
           />
           <div>
             <SubmitButton

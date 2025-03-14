@@ -63,6 +63,7 @@ export default function RegisterForm({ role = "USER" }: { role?: UserRole }) {
             register={register}
             name="fullName"
             errors={errors}
+             placeholder=""
           />
           <TextInputs
             label="Email address"
@@ -70,12 +71,14 @@ export default function RegisterForm({ role = "USER" }: { role?: UserRole }) {
             name="email"
             errors={errors}
             type="email"
+             placeholder=""
           />
           <TextInputs
             label="Phone Number"
             register={register}
             name="phone"
             errors={errors}
+             placeholder=""
           />
           <TextInputs
             label="Password"
@@ -83,6 +86,7 @@ export default function RegisterForm({ role = "USER" }: { role?: UserRole }) {
             name="password"
             errors={errors}
             type="password"
+             placeholder=""
           />
           <div>
             <SubmitButton

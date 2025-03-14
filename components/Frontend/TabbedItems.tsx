@@ -6,11 +6,6 @@ import { MdDashboard } from "react-icons/md";
 import ServicesList from "./Services/ServicesList";
 import LinkCards from "./Doctors/LinkCards";
 
-// Dermatology
-// Pediatrics
-// Men’s health
-// Women’s health
-// Dental
 export default function TabbedItems() {
 
   const services = [

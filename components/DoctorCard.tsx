@@ -27,13 +27,13 @@ export default function DoctorCard({ isInPerson = false, doctor}: { isInPerson?:
     },
   ];
   return (
-    <div className="bg-white border border-gray-300 inline-flex rounded-md py-6 px-4 max-w-[320px] flex-col hover:border-gray-400/80 duration-300 transition-all">
+    <div className="bg-white border dark:bg-slate-700 border-gray-200 dark:border-gray-500 inline-flex rounded-md py-6 px-4 max-w-[320px] flex-col hover:border-gray-400/80 duration-300 transition-all">
       <Link href="/doctors/slug" className=" flex-col rounded-md">
         <h2 className="capitalize font-bold text-[20px]">
           {`Dr.${doctor.name} Pabis, MD`} 
         </h2>
         {isInPerson ? (
-          <p className="py-1 text-[14px] text-gray-600">
+          <p className="py-1 text-[14px] text-gray-500 dark:text-gray-50">
             57 St. Marks Place, New York, NY 10003
           </p>
         ) : (
@@ -64,25 +64,25 @@ export default function DoctorCard({ isInPerson = false, doctor}: { isInPerson?:
             </p>
             <p
               className="bg-[#baffd6] py-1 px-2 text-center capitalize text-[12px] 
-          text-[#106047]"
+          text-[#106047] dark:text-gray-800"
             >
               Available Tody
             </p>
           </div>
         </div>
-        <p className="py-2 text-[12px] text-gray-500">
+        <p className="py-2 text-[12px] text-gray-500 dark:text-gray-50">
           Great customer service! Love the doctors and the entire staff
         </p>
       </Link>
-      <div className="py-2 border-t border-gray-300 text-[15px] flex justify-between font-bold">
-        <span>Thu, Jan 23</span>
+      <div className="py-2 border-t border-gray-300 dark:border-gray-600 text-[15px] flex justify-between font-bold">
+        <span className="dark:text-gray-400">Thu, Jan 23</span>
         <span className="text-purple-700">$134</span>
       </div>
       <div className="pt-3 grid grid-cols-3 gap-2">
         {times.slice(0, 5).map((time, i) => {
           return (
             <Link
-              href="#"
+              href="/doctors/slug"
               key={i}
               className="bg-purple-700 text-center text-white py-1 px-3 rounded-full hover:bg-purple-600"
             >
@@ -93,7 +93,7 @@ export default function DoctorCard({ isInPerson = false, doctor}: { isInPerson?:
         })}
         <Link
           className="bg-purple-300 text-center text-purple-700 py-1 px-3 rounded-full hover:bg-purple-600 hover:text-white"
-          href="#"
+          href="/doctors/slug"
         >
           More...
         </Link>

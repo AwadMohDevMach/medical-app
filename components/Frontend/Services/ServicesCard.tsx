@@ -8,7 +8,7 @@ export default function ServicesCard({service}:{service :TDataServices}) {
     <Link
       href={`/services/${service.slug}`}
       className="rounded-md bg-slate-100 hover:bg-slate-200
-    duration-300 flex gap-4"
+    duration-300 flex gap-4 dark:bg-slate-800"
     >
       <Image
         src={service.Image}

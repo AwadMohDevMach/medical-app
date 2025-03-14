@@ -1,19 +1,11 @@
-import LoginForm from '@/components/Auth/LoginForm'
-import React from 'react'
+import LoginFormWithBg  from "@/components/Auth/Login"
 
-export default function page() {
+export default function LoginPage() {
   return (
-    <div className='bg-blue-100 min-h-screen py-8'>
-        <div className="grid md:grid-cols-2 grid-cols-1 
-        w-full max-w-5xl mx-auto bg-white border border-gray-200 rounded-lg 
-        shadow-sm  dark:bg-gray-800 dark:border-gray-700">
-        <div className="hidden md:flex linear-bg">
-            {/* image */}
-        </div>
-        <div className="">
-           <LoginForm/>
-        </div>
-        </div>
+    <div className="flex min-h-svh flex-col items-center justify-center bg-muted p-6 md:p-10">
+      <div className="w-full max-w-sm md:max-w-3xl">
+        <LoginFormWithBg />
+      </div>
     </div>
   )
 }

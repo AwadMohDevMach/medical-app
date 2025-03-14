@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import { Label } from "../ui/label";
+import { Input } from "../ui/input";
 
 type TextInputsProps = {
   label: string;
@@ -7,6 +9,8 @@ type TextInputsProps = {
   name: string;
   type?: string;
   errors: any;
+  placeholder: string;
+  page?:string
 };
 export default function TextInputs({
   label,
@@ -14,41 +18,36 @@ export default function TextInputs({
   name,
   type = "text",
   errors,
+  placeholder,
+  page
 }: TextInputsProps) {
   return (
-    <div>
-      <div className="flex justify-between items-center">
-        <label
-          htmlFor={`${name}`}
-          className="block text-sm/6 font-medium text-gray-900"
-        >
-          {label}
-        </label>
-        {name === "password" ? (
-          <div className="text-sm">
-            <Link
-              href="#"
-              className="font-semibold text-indigo-600 hover:text-indigo-500"
-            >
-              Forgot password?
-            </Link>
-          </div>
-        ) : null}
-      </div>
+    <div className="grid gap-2">
+      {type === "password" && page === "login" ? (
+        <div className="flex items-center">
+          <Label htmlFor={`${name}`}>{label}</Label>
+          <Link
+            href="#"
+            className="ml-auto text-sm underline-offset-2 hover:underline"
+          >
+            Forgot your password?
+          </Link>
+        </div>
+      ) : (
+        <Label htmlFor={`${name}`}>{label}</Label>
+      )}
 
-      <div className="mt-2">
-        <input
-          {...register(`${name}`, { required: true })}
-          id={`${name}`}
-          name={`${name}`}
-          type={`${type}`}
-          autoComplete="name"
-          className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-        />
-        {errors[`${name}`] && (
-          <span className="text-red-600 text-sm">{label} is required</span>
-        )}
-      </div>
+      <Input
+        {...register(`${name}`, { required: true })}
+        id={`${name}`}
+        name={`${name}`}
+        type={`${type}`}
+        autoComplete="name"
+        placeholder={placeholder}
+      />
+      {errors[`${name}`] && (
+        <span className="text-red-600 text-sm">{label} is required</span>
+      )}
     </div>
   );
 }

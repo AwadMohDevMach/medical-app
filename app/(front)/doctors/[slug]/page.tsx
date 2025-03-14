@@ -6,8 +6,8 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="bg-slate-300 min-h-screen py-48">
-      <div className="bg-white border border-gray-200 max-w-4xl mx-auto shadow-2xl py-10  ">
+    <div className="bg-slate-300 min-h-screen py-10 dark:bg-slate-800">
+      <div className="bg-white border dark:border-gray-500  border-gray-200 dark:bg-slate-900 max-w-4xl mx-auto shadow-2xl py-10  ">
         <div className="flex px-5">
           <Image
             className="w-28 h-28 rounded-full"

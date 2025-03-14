@@ -3,12 +3,12 @@
 import { TRegisterAndLogInIputsProps } from "@/types/dataServices";
 import { prismaClient } from "@/lib/db";
 import bcrypt from "bcrypt";
-import { Resend } from "resend";
-import EmailTemplate from "@/components/Emails/EmailTemplate";
-import { isValid } from "date-fns";
+// import { Resend } from "resend";
+// import EmailTemplate from "@/components/Emails/EmailTemplate";
+// import { isValid } from "date-fns";
 
 export async function createUser(formData: TRegisterAndLogInIputsProps) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  // const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { fullName, email, phone, password, role } = formData;
 
@@ -66,11 +66,12 @@ export async function createUser(formData: TRegisterAndLogInIputsProps) {
     // console.log(sendMail);
     // console.log(newUser);
     return {
-      error: null,
-      status: 200,
-      statusText: "success",
-      data: newUser,
-    };
+        error: null,
+        status: 200,
+        statusText: "success",
+        data: newUser,
+
+    }
   } catch (e) {
     return { e: "somthing went wrong" };
   }

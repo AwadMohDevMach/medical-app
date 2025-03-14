@@ -5,23 +5,19 @@ import Link from "next/link";
 import SearchBar from "./SearchBar";
 import TransitionalText from "./TransitionalText";
 import { Pill } from "lucide-react";
+import { CommandMenu } from "../comman-menu";
 
 const TEXTS = [
-  "Acuppunctuer",
   "Massage",
-  "Chiropractor",
   "Dental",
   "Cosmetic",
   "Dietitian",
-  "Speach Therapist",
-  "Occupational",
   "Therapist",
-  "Acupunctursit",
 ];
 
 const Hero = () => {
   return (
-    <div className="bg-blue-950 max-sm:ml-[10px] max-sm:mt-[55px] max-sm:max-w-96">
+    <div className="bg-blue-950 max-sm:ml-[10px] max-sm:mt-[55px] max-sm:max-w-96 dark:bg-slate-950">
       <div className="relative  pb-[110px] pt-[50px] dark:bg-dark lg:pt-[50px] max-w-6xl mx-auto ">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -29,18 +25,18 @@ const Hero = () => {
               <div className="hero-content">
                 <h1 className="flex flex-wrap gap-3 mb-5 text-5xl font-bold !leading-[1.208] text-gray-50 dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
                   <span>Book your </span>{" "}
-                  <TransitionalText
-                    TEXTS={TEXTS}
-                    className=" text-blue-500"
-                  />
+                  <TransitionalText TEXTS={TEXTS} className=" text-blue-500" />
                   <br />
                   <span>session now,</span>
                 </h1>
                 <p className="mb-8 max-w-[480px] text-base text-gray-200 dark:text-gray-50-6">
-                Health shoudn't be a puzzle, we are cutting through B.S to bring you simple,
-                affordable, and transparent healethcare 
+                  Health shoudn't be a puzzle, we are cutting through B.S to
+                  bring you simple, affordable, and transparent healethcare
                 </p>
-                <SearchBar />
+                {/* <SearchBar /> */}
+                <div className="hidden w-full flex-1 md:flex md:w-auto md:flex-none pb-4">
+                  <CommandMenu />
+                </div>
                 <ul className="flex flex-wrap items-center">
                   <li>
                     <Link
@@ -58,7 +54,7 @@ const Hero = () => {
                       <span className="mr-2">
                         <Pill className="flex-shrink-0 h-4 w-4 text-blue-500" />
                       </span>
-                      Need  a Refill
+                      Need a Refill
                     </Link>
                   </li>
                 </ul>
@@ -66,13 +62,13 @@ const Hero = () => {
                   <div className="flex flex-col justify-center items-center">
                     <span className="font-bold text-gray-50">600</span>
                     <span className="text-sm text-gray-500">
-                      Active Statistics 
+                      Active Statistics
                     </span>
                   </div>
                   <div className="flex flex-col justify-center items-center">
                     <span className="font-bold text-gray-50">1800</span>
                     <span className="text-sm text-gray-500">
-                      Active Patients 
+                      Active Patients
                     </span>
                   </div>
                 </div>
